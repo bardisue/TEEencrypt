@@ -175,7 +175,7 @@ static TEE_Result dec_value(uint32_t param_types,
                         decrypted[i] += 'A';
                 }
         }
-	decrypted[in_len-1] = '\0';	// NULL
+	decrypted[in_len-1] = '\0';	
         DMSG ("Plaintext:  %s", decrypted);
         memcpy(in, decrypted, in_len);
 
@@ -190,7 +190,7 @@ TEE_Result TA_InvokeCommandEntryPoint(void __maybe_unused *sess_ctx,
 			uint32_t cmd_id,
 			uint32_t param_types, TEE_Param params[4])
 {
-	(void)&sess_ctx; /* Unused parameter */
+	(void)&sess_ctx; 
 	root_key = 3;
 	switch (cmd_id) {
 	case TA_TEEencrypt_CMD_ENC_VALUE:
