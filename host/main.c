@@ -1,4 +1,3 @@
-
 #include <err.h>
 #include <stdio.h>
 #include <string.h>
@@ -46,7 +45,6 @@ int main(int argc, char *argv[])
 
 			encKey[0] = op.params[1].value.a;
 	                encKey[1] = '\0';
-	                //strcat(ciphertext, encKey);
 
 	                FILE* tmpW = fopen("./encText.txt", "w");
 	                fwrite(ciphertext, strlen(ciphertext), 1, tmpW);
