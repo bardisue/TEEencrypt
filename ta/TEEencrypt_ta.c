@@ -108,14 +108,7 @@ static TEE_Result randomkey_get(uint32_t param_types, TEE_Param params[4])
         }
 	if(random_key < 0)
 		random_key *= -1;
-        DMSG("Random Key: %d\n", random_key);
         return TEE_SUCCESS;
-}
-
-static TEE_Result randomkey_enc(uint32_t param_types, TEE_Param params[4])
-{
-
-	return TEE_SUCCESS;
 }
 
 static TEE_Result enc_value(uint32_t param_types,
@@ -125,7 +118,6 @@ static TEE_Result enc_value(uint32_t param_types,
 	int in_len = strlen(params[0].memref.buffer);
 	char encrypted[64] = {0,};
 
-	DMSG("========================Encryption========================\n");
 	DMSG("Plaintext: %s", in);
 	memcpy(encrypted, in, in_len);
 
